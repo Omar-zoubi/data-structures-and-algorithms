@@ -42,7 +42,7 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
-    let regEx = /\d/;
+  let regEx = /\d/;
   return regEx.test(input);
 };
 
@@ -82,11 +82,11 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
-    let newArr=[];
+  let newArr=[];
   const regEx = /^[A-J]/;
   arr.forEach(element => {
     if (regEx.test(element))
-    newArr.push(element)
+    newArr.push(element);
   });
   return newArr;
 };
