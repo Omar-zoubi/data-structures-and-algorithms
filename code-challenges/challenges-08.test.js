@@ -9,6 +9,9 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str){
   // Solution code here...
+  let strArr = str.split('');
+  let splicedArr = strArr.splice(strArr.length - 10);
+  return splicedArr;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,6 +24,7 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
+  return arr.filter(a => Number(a));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,6 +37,7 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
+  return arr.filter(a => a.includes('and'));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,7 +50,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
-};
+  return arr.filter(a => a % 2);};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -60,6 +65,8 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
+  let reg = /A|E|O|U|I/i;
+  return arr.filter(a => reg.test(a));
 };
 
 
@@ -73,6 +80,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+  return arr.filter(a => !forbiddenValues.includes(a));
 };
 
 /* ------------------------------------------------------------------------------------------------
