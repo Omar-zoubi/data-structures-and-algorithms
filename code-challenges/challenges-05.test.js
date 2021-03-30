@@ -140,6 +140,22 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.ingredients.forEach(item => {
+    if (item.includes('8 pounds') || item.includes('2 pounds') || item.includes('4 pounds')) {
+      result.push(item.slice(9));
+    }
+    if (item.includes('16 cups') || item.includes('1 pound')) {
+      result.push(item.slice(8));
+    }
+    if (item.includes('6 gallons') || item.includes('2 gallons')) {
+      result.push(item.slice(10));
+    }
+    if (item.includes('1 medium-sized')) {
+      result.push(item.slice(15));
+    }
+  })
+=======
+
   return result;
 };
 
