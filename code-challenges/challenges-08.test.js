@@ -9,9 +9,9 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str){
   // Solution code here...
-  let strArr = str.split('');
-  let splicedArr = strArr.splice(strArr.length - 10);
-  return splicedArr;
+  let splArray = str.split('');
+  let splicedArray = splArray.splice(splArray.length - 10);
+  return splicedArray;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,8 +65,8 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
-  let reg = /A|E|O|U|I/i;
-  return arr.filter(a => reg.test(a));
+  let regEx = /A|E|O|U|I/i;
+  return arr.filter(a => regEx.test(a));
 };
 
 
