@@ -8,16 +8,12 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   // Solution code here...
- 
- const addTowArray=[];
-  
-  for(let i=0; i<arr.length;i++){
-    addTowArray.push(arr[i]+2);
-    
+  const plusTowArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    plusTowArr.push(arr[i] + 2);
   }
-  return addTowArray;
+  return plusTowArr;
 }
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -28,9 +24,9 @@ Write a function named containsW that takes in a string. This function should us
 
 const containsW = (str) => {
   // Solution code here...
-    let case1 = /[w]/;
-    return case1.test(str);
-  };
+  let lowerCase = /[w]/;
+  return lowerCase.test(str);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -46,8 +42,8 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
-  let isNumber= /\d/;
-  return isNumber.test(input);
+  let regEx = /\d/;
+  return regEx.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,9 +55,8 @@ Write a function named containsWorld that takes in a string or number of any len
 
 const containsWorld = (input) => {
   // Solution code here...
-  let regEx=/world/;
-  let reValue=regEx.test(input);
-  return reValue;
+  let regEx = /world/;
+  return regEx.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -74,18 +69,10 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
-
-    let regEx = /\b[A-Z]\w*/g;
-    let isCapital = str.match(regEx);
-    let capArr=[];
-    for(let i in str)
-    {
-      if (isCapital)
-      capArr.push(isCapital);
-    }
-    return isCapital;
-  };
-
+  const regEx = /\b[A-Z]\w*/g;
+  const upper = str.match(regEx);
+  return upper === null ? [] : upper;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -95,14 +82,12 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
-  let newArr=[];
-  let char = /[A-J]/
+  let newArr = [];
+  const re = /^[A-J]/;
   arr.forEach(element => {
-    if (char.test(arr[element]))
-    newArr.push(arr[element])
-    
+    if (re.test(element)) { newArr.push(element); }
   });
-
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -225,7 +210,7 @@ describe('Testing challenge 5', () => {
   test('It should only return words that begin with a capital letter', () => {
     const capitalResult = isCapitalized('We only want to Return the Words that begin With a capital Letter');
 
-    expect(capitalResult).toStrictEqual([ 'We', 'Return', 'Words', 'With', 'Letter' ]);
+    expect(capitalResult).toStrictEqual(['We', 'Return', 'Words', 'With', 'Letter']);
     expect(capitalResult.length).toStrictEqual(5);
 
     expect(isCapitalized('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toStrictEqual(['Given', 'Runnymede', 'Windsor', 'Staines', 'June', 'May']);
@@ -272,7 +257,7 @@ xdescribe('Testing challenge 8', () => {
   const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia vel massa sed egestas. Nunc faucibus iaculis elit, a scelerisque enim condimentum sed. Aenean ac scelerisque sem, et pharetra diam.';
 
   test('It should only return words that are immediately followed by a space', () => {
-    expect(noPunctuation(lorem)).toStrictEqual([ 'Lorem ', 'ipsum ', 'dolor ', 'sit ', 'consectetur ', 'adipiscing ', 'Cras ', 'lacinia ', 'vel ', 'massa ', 'sed ', 'Nunc ', 'faucibus ', 'iaculis ', 'a ', 'scelerisque ', 'enim ', 'condimentum ', 'Aenean ', 'ac ', 'scelerisque ', 'et ', 'pharetra ' ]);
+    expect(noPunctuation(lorem)).toStrictEqual(['Lorem ', 'ipsum ', 'dolor ', 'sit ', 'consectetur ', 'adipiscing ', 'Cras ', 'lacinia ', 'vel ', 'massa ', 'sed ', 'Nunc ', 'faucibus ', 'iaculis ', 'a ', 'scelerisque ', 'enim ', 'condimentum ', 'Aenean ', 'ac ', 'scelerisque ', 'et ', 'pharetra ']);
     expect(noPunctuation(lorem).length).toStrictEqual(23);
     expect(noPunctuation('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toEqual(expect.arrayContaining(['Given ', 'by ', 'our ', 'hand ', 'in ', 'the ', 'meadow ', 'that ', 'is ', 'called ', 'between ', 'Windsor ', 'and ', 'on ', 'the ', 'fifteenth ', 'day ', 'of ', 'June ', 'in ', 'the ', 'seventeenth ', 'year ', 'of ', 'our ', 'reign ', 'the ', 'new ', 'regnal ', 'year ', 'began ', 'on ', '28 ']));
   });
