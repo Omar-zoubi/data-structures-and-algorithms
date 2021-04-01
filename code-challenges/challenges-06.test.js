@@ -64,6 +64,7 @@ const sortByChildren = (charArray) => {
     }
   });
   return charArray;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,6 +76,7 @@ For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
 const courseInfo = {
   name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
+
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
@@ -82,6 +84,7 @@ const courseInfo = {
 const getCourseKeys = (obj) => {
   // Solution code here...
   return Object.keys(obj);
+
 
 
 };
@@ -103,6 +106,7 @@ const checkValues = (obj, value) => {
   else {
     return false;
   }
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -132,6 +136,7 @@ const updateNumbers = (obj) => {
     array.push(item.join(': '));
   });
   return array;
+
 };
 
 
@@ -150,6 +155,7 @@ const getHouses = (arr) => {
   arr.forEach(item => {
     houses.push(item.house);
   });
+
   return houses;
 };
 

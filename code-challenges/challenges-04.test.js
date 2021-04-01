@@ -14,10 +14,10 @@ const addTwo = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     addTowArray.push(arr[i] + 2);
 
-  }
-  return addTowArray;
-}
 
+  }
+  return plusTowArr;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -28,8 +28,10 @@ Write a function named containsW that takes in a string. This function should us
 
 const containsW = (str) => {
   // Solution code here...
+
   let case1 = /[w]/;
   return case1.test(str);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,8 +48,10 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
+
   let isNumber = /\d/;
   return isNumber.test(input);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,8 +64,10 @@ Write a function named containsWorld that takes in a string or number of any len
 const containsWorld = (input) => {
   // Solution code here...
   let regEx = /world/;
+
   let reValue = regEx.test(input);
   return reValue;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,6 +81,7 @@ Return an array containing all the matches.
 const isCapitalized = (str) => {
   // Solution code here...
 
+
   let regEx = /\b[A-Z]\w*/g;
   let isCapital = str.match(regEx);
   let capArr = [];
@@ -83,6 +90,12 @@ const isCapitalized = (str) => {
       capArr.push(isCapital);
   }
   return isCapital;
+};
+
+
+  const regEx = /\b[A-Z]\w*/g;
+  const upper = str.match(regEx);
+  return upper === null ? [] : upper;
 };
 
 
@@ -100,8 +113,9 @@ const citiesAtoJ = (arr) => {
     if (char.test(arr[element]))
       newArr.push(arr[element])
 
-  });
 
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
