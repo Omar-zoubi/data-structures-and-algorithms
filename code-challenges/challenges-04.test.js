@@ -11,6 +11,7 @@ const addTwo = (arr) => {
   const newArray = [];
   for (let i = 0; i < arr.length; i++) {
     newArray.push(arr[i] + 2);
+
   }
   return newArray;
 }
@@ -26,6 +27,7 @@ const containsW = (str) => {
   // Solution code here...
   let regEx = /w/g;
   return regEx.test(str);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -42,8 +44,10 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
-  let regEx = /\d/;
-  return regEx.test(input);
+
+  let isNumber = /\d/;
+  return isNumber.test(input);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,6 +62,7 @@ const containsWorld = (input) => {
   let regEx = /world/g;
   // let regEx = /world/;
   return regEx.test(input);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,7 +80,24 @@ const isCapitalized = (str) => {
     return [];
   }
   return str.match(regEx);
+
+
+  let regEx = /\b[A-Z]\w*/g;
+  let isCapital = str.match(regEx);
+  let capArr = [];
+  for (let i in str) {
+    if (isCapital)
+      capArr.push(isCapital);
+  }
+  return isCapital;
 };
+
+
+  const regEx = /\b[A-Z]\w*/g;
+  const upper = str.match(regEx);
+  return upper === null ? [] : upper;
+};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -90,6 +112,7 @@ const citiesAtoJ = (arr) => {
   arr.forEach(item => {
     if (regEx.test(item))
       newArray.push(item);
+
   });
   return newArray;
 };
