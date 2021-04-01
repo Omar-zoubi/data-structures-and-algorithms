@@ -57,14 +57,10 @@ let characters = [
 const sortByChildren = (charArray) => {
   // Solution code here...
   charArray.sort((a, b) => {
-    if ((a.children.length - b.children.length) < 0) {
-      return -1;
-    }
-    if ((a.children.length - b.children.length) > 0) {
-      return 1;
-    }
-    else if ((a.house - b.house) > 0) {
-      return 1;
+    if (a.children.length != b.children.length) {
+      return a.children.length - b.children.length;
+    } else {
+      return (a.name.toUpperCase() < b.name.toUpperCase()) ? -1 : 1;
     }
   });
   return charArray;
@@ -85,8 +81,8 @@ const courseInfo = {
 
 const getCourseKeys = (obj) => {
   // Solution code here...
-  const ObjKeys = Object.keys(obj);
-  return ObjKeys;
+  return Object.keys(obj);
+
 
 };
 
@@ -130,8 +126,11 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
+
   const array = [];
-  array.push(obj);
+  Object.entries(obj).forEach(item => {
+    array.push(item.join(': '));
+  });
   return array;
 };
 
@@ -144,8 +143,10 @@ Write a function named getHouses that returns a new array containing the names o
 ------------------------------------------------------------------------------------------------ */
 
 const getHouses = (arr) => {
-  let houses = [];
+
+
   // Solution code here...
+  let houses = [];
   arr.forEach(item => {
     houses.push(item.house);
   });
@@ -166,6 +167,13 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+  let child = 0;
+  arr.forEach(char => {
+    if (char.name == character) {
+      child = Object.values(char)[2].length;
+    }
+  });
+  return child;
 
 };
 
