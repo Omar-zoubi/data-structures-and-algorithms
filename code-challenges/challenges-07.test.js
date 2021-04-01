@@ -8,16 +8,8 @@ Write a function named replaceZeros that, given a string, uses Regex to replace 
 
 const replaceZeros = (string) => {
   // Solution code here...
-  let splString = string.split('');
-  let search = splString.map(item => {
-    if (/0/.test(item)) {
-      return 'zero';
-    } else {
-      return item;
-    }
-  });
-  return search.join('');
-  // return string;
+  let result = /0/g;
+  return string.replace(result, 'zero');
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,8 +20,8 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 
 const addOne = (arr) => {
   // Solution code here...
-  const adOn = arr.map(x => x=x+1);
-  return adOn;
+  const newMap = arr.map(x => x + 1);
+  return newMap;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -40,9 +32,8 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   // Solution code here...
-  const adQu = arr.map(x => x+'?');
-  return adQu;
-
+  const newMap = arr.map(x => x + '?');
+  return newMap;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,9 +48,9 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 
 const forLoopTwoToThe = (arr) => {
   // Solution code here...
-  let newArray = [];
-  for (let i of arr) {
-    newArray.push(Math.pow(2, i));
+  const newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArray.push(Math.pow(2, arr[i]));
   }
   return newArray;
 };
@@ -72,10 +63,7 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
   // Solution code here...
-  let newArray = [];
-  arr.forEach(elem => {
-    newArray.push(Math.pow(2, elem));
-  });
+  const newArray = arr.map(x => Math.pow(2, x));
   return newArray;
 };
 
@@ -87,8 +75,11 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
-  const newMap = arr.map(x => Math.pow(2,x));
-  return newMap;
+  let newArray = [];
+  arr.forEach(item => {
+    newArray.push(Math.pow(2, item));
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
