@@ -8,9 +8,13 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   // Solution code here...
-  const plusTowArr = [];
+
+  const addTowArray = [];
+
   for (let i = 0; i < arr.length; i++) {
-    plusTowArr.push(arr[i] + 2);
+    addTowArray.push(arr[i] + 2);
+
+
   }
   return plusTowArr;
 }
@@ -24,8 +28,10 @@ Write a function named containsW that takes in a string. This function should us
 
 const containsW = (str) => {
   // Solution code here...
-  let lowerCase = /[w]/;
-  return lowerCase.test(str);
+
+  let case1 = /[w]/;
+  return case1.test(str);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -42,8 +48,10 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
-  let regEx = /\d/;
-  return regEx.test(input);
+
+  let isNumber = /\d/;
+  return isNumber.test(input);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,7 +64,10 @@ Write a function named containsWorld that takes in a string or number of any len
 const containsWorld = (input) => {
   // Solution code here...
   let regEx = /world/;
-  return regEx.test(input);
+
+  let reValue = regEx.test(input);
+  return reValue;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -69,10 +80,24 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+
+
+  let regEx = /\b[A-Z]\w*/g;
+  let isCapital = str.match(regEx);
+  let capArr = [];
+  for (let i in str) {
+    if (isCapital)
+      capArr.push(isCapital);
+  }
+  return isCapital;
+};
+
+
   const regEx = /\b[A-Z]\w*/g;
   const upper = str.match(regEx);
   return upper === null ? [] : upper;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -83,9 +108,12 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 const citiesAtoJ = (arr) => {
   // Solution code here...
   let newArr = [];
-  const re = /^[A-J]/;
+  let char = /[A-J]/
   arr.forEach(element => {
-    if (re.test(element)) { newArr.push(element); }
+    if (char.test(arr[element]))
+      newArr.push(arr[element])
+
+
   });
   return newArr;
 };

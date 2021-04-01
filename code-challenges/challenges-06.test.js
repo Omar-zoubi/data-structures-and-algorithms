@@ -56,6 +56,19 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
+  charArray.sort((a, b) => {
+    if ((a.children.length - b.children.length) < 0) {
+      return -1;
+    }
+    if ((a.children.length - b.children.length) > 0) {
+      return 1;
+    }
+    else if ((a.house - b.house) > 0) {
+      return 1;
+    }
+  });
+  return charArray;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,13 +78,19 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+const courseInfo = {
+  name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
+
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
 
 const getCourseKeys = (obj) => {
   // Solution code here...
+  const ObjKeys = Object.keys(obj);
+  return ObjKeys;
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -84,6 +103,14 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
+  const ObjKeys = Object.values(obj);
+  if (ObjKeys.includes(value)) {
+    return true;
+  }
+  else {
+    return false;
+  }
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -107,6 +134,10 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
+  const array = [];
+  array.push(obj);
+  return array;
+
 };
 
 
@@ -120,6 +151,10 @@ Write a function named getHouses that returns a new array containing the names o
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
+  arr.forEach(item => {
+    houses.push(item.house);
+  });
+
   return houses;
 };
 
