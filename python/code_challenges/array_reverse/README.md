@@ -13,4 +13,4 @@ I used the lenghth function
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![](python/img/arrayReverse.PNG)
+![](img/arrayReverse.PNG)
