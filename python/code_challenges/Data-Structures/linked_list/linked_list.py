@@ -41,13 +41,13 @@ class Linked_list:
         return inc
 
 
-# linkedlist = Linked_list()
-# linkedlist.insert("A")
-# linkedlist.insert("B")
-# linkedlist.insert("w")
-# linkedlist.insert("B")
-# linkedlist.insert("d")
-# linkedlist.insert("e")
-# linkedlist.printss()
+linkedlist = Linked_list()
+linkedlist.insert("A")
+linkedlist.insert("B")
+linkedlist.insert("w")
+linkedlist.insert("B")
+linkedlist.insert("d")
+linkedlist.insert("e")
+linkedlist.printss()
 
-# print(linkedlist.include("Al"))
+print(linkedlist.include("Al"))
