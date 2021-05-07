@@ -8,4 +8,4 @@ Approach & Efficiency
 Big O :
 log 2^n
 Solution
-![](../img/Binary Search.PNG)
+![](../binary_search/Binary Search.PNG)
