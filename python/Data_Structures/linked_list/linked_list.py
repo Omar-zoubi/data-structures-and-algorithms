@@ -19,7 +19,7 @@ class Linked_list:
             last_node = last_node.next
         last_node.next=new_node
     
-    def printss(self):
+    def __str__(self):
         cur_node= self.head
         result =""
         while cur_node:
@@ -27,8 +27,8 @@ class Linked_list:
             result += "{" + cur_node.data + "}" + "->"
             cur_node=cur_node.next
         # print("=>NULL")
-        result += " NULL"
-        print(result)
+        result += "NULL"
+        return result
 
 
     def include(self, index):
@@ -41,13 +41,3 @@ class Linked_list:
         return inc
 
 
-# linkedlist = Linked_list()
-# linkedlist.insert("A")
-# linkedlist.insert("B")
-# linkedlist.insert("w")
-# linkedlist.insert("B")
-# linkedlist.insert("d")
-# linkedlist.insert("e")
-# linkedlist.printss()
-
-# print(linkedlist.include("Al"))
