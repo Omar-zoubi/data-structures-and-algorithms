@@ -18,4 +18,7 @@ then define a method to loop over and search.
 then I test all the function 
 ## API
 <!-- Description of each method publicly available to your Linked List -->
-First there is a class to create a node then a class to make them on list and referensed to each other and also to loop over them and to look for the needed value 
+Linked-List Class is the main class it has 3 main method :
+1. insert : It call node class to fill the value of the node and make the node a Head node if the head is none 
+2. __str__ : It iterate ove the node and save them in Result value and finally return it 
+3. include: itrate over the linked list to looke for spacific value ,, then return a logical value;
