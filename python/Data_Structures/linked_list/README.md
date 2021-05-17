@@ -22,3 +22,7 @@ Linked-List Class is the main class it has 3 main method :
 1. insert : It call node class to fill the value of the node and make the node a Head node if the head is none 
 2. __str__ : It iterate ove the node and save them in Result value and finally return it 
 3. include: itrate over the linked list to looke for spacific value ,, then return a logical value;
+
+
+
+

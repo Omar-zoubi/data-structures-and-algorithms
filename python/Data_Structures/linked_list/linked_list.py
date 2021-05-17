@@ -41,3 +41,69 @@ class Linked_list:
         return inc
 
 
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+          self.head = new_node
+        else :
+            last_node =self.head
+
+            while last_node.next:
+             last_node = last_node.next
+        last_node.next=new_node
+    
+    def insert_after(self, aftervalue, addval):
+        new_node = Node(addval)
+        current = self.head
+        if not self.head:
+                return "EMPETY LIST"
+        else:
+            current = self.head
+            while current:
+                if current.next:
+                    if current.data == aftervalue:
+                        nv = current.next
+                        current.next = new_node
+                        new_node.next = nv
+                        return
+                    else:
+                        current = current.next
+                else:
+                    current.next = new_node
+                    return 
+            return "No mathch"
+    
+
+
+
+    def insert_before(self, nxvalue, addval):
+
+        new_node = Node(addval)
+        current = self.head
+        if not self.head:
+            return "this list is emptey"
+        else:
+            if self.head.data == nxvalue:
+                previous = self.head
+                self.head = new_node
+                new_node.next = previous
+                return 
+            current = self.head
+            while current.next :
+                if current.next.data == nxvalue:
+                    previous = current.next
+                    current.next = new_node
+                    new_node.next = previous
+                    return 
+                current = current.next
+
+            return "No match"
+
+              
+# llist = Linked_list()
+# llist.insert("Omar")
+# llist.insert("Mohammad")
+# llist.insert("Al-zoubi")
+# llist.insertAfter("Mohammad", "5")
+# print(llist.insertBefore("Mohammad", "5"))
+# # print(llist)
