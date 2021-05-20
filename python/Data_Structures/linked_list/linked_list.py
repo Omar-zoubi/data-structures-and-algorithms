@@ -24,7 +24,7 @@ class Linked_list:
         result =""
         while cur_node:
             # print (f"{"cur_node.data"}" ,"->" )
-            result += "{" + cur_node.data + "}" + "->"
+            result += f"{ {str(cur_node.data)} } -> "
             cur_node=cur_node.next
         # print("=>NULL")
         result += "NULL"
@@ -49,8 +49,8 @@ class Linked_list:
             last_node =self.head
 
             while last_node.next:
-             last_node = last_node.next
-        last_node.next=new_node
+                last_node = last_node.next
+            last_node.next=new_node
     
     def insert_after(self, aftervalue, addval):
         new_node = Node(addval)
@@ -100,10 +100,11 @@ class Linked_list:
             return "No match"
 
               
-# llist = Linked_list()
-# llist.insert("Omar")
-# llist.insert("Mohammad")
-# llist.insert("Al-zoubi")
-# llist.insertAfter("Mohammad", "5")
-# print(llist.insertBefore("Mohammad", "5"))
-# # print(llist)
+llist = Linked_list()
+llist.insert("Omar")
+llist.insert("Mohammad")
+llist.insert("Al-zoubi")
+llist.insert_after("Mohammad", "5")
+# print(llist.insert_after("Mohammad", "5"))
+llist.insert_before("Mohammad", "5")
+print(llist)
