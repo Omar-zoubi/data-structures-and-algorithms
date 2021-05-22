@@ -30,3 +30,4 @@ second to add before targgeted value and the theird was for adding a node after 
 2. Add before: recieve a new value and another value to add before it , make it a new node search for the (add before value), make the new value reference for next value and make the previouse value refernce for the new value.
 3. Add after:  recieve a new value and another value to add aftre it, make the next value pointer for the new value, and the prevouse value well be a refernce fot the new node.
 
+[Pull req](https://github.com/Omar-zoubi/data-structures-and-algorithms/pull/27)
