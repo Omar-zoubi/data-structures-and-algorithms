@@ -1,24 +1,33 @@
 # Singly Linked List
 <!-- Short summary or background information -->
-We created chain of nodes in which each node is connected to each other by means of pointers or references,
-our code desigend to create a linked list then add a node as much as we need also we can search over it 
 
 ## Challenge
 <!-- Description of the challenge -->
-it is hard when it come to dynamic valuse but I manage to follow some step to do it:
-I create a class to creat a node 
-Another class to connect them to gather 
-Then a method to loop over and search.
+Understanding the concept of linked list make every thing easyer But it need more fucos to handel every singile detail.
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-I create a class to creat a node 
-another class to connect them to gather 
-then define a method to loop over and search.
-then I test all the function 
+I create three new function first to append 
+second to add before targgeted value and the theird was for adding a node after a targgeted value 
 ## API
 <!-- Description of each method publicly available to your Linked List -->
-Linked-List Class is the main class it has 3 main method :
-1. insert : It call node class to fill the value of the node and make the node a Head node if the head is none 
-2. __str__ : It iterate ove the node and save them in Result value and finally return it 
-3. include: itrate over the linked list to looke for spacific value ,, then return a logical value;
+
+
+
+# Challenge Summary
+<!-- Description of the challenge -->
+After creating a node class and linked list calss to add nodes I added a three new method, Add after, Add before and Append that added more functionality to the code 
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![](img/Untitled (7).jpg)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+I create three new function first to append 
+second to add before targgeted value and the theird was for adding a node after a targgeted value 
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+1. Append function: recieve a new value, make it a new node and append it to the linked list.
+2. Add before: recieve a new value and another value to add before it , make it a new node search for the (add before value), make the new value reference for next value and make the previouse value refernce for the new value.
+3. Add after:  recieve a new value and another value to add aftre it, make the next value pointer for the new value, and the prevouse value well be a refernce fot the new node.
+
+[Pull req](https://github.com/Omar-zoubi/data-structures-and-algorithms/pull/27)
