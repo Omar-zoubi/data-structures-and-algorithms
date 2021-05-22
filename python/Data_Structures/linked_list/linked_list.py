@@ -99,6 +99,23 @@ class Linked_list:
 
             return "No match"
 
+    def kthFromEnd(self, k):
+        length = 0
+        current = self.head
+        while(current):
+            length += 1
+            current = current.next
+        print(length)
+        if k >= length or k < 0:
+            return 'Invalid Index'
+
+        current = self.head
+        for i in range(0,length-k):
+            if i== length-k-1:
+                return current.data
+            current = current.next
+    
+
               
 llist = Linked_list()
 llist.insert("Omar")
@@ -107,3 +124,4 @@ llist.insert("Al-zoubi")
 llist.insert_after("Mohammad", "5")
 llist.insert_before("Mohammad", "5")
 print(llist)
+print(llist.kthFromEnd(0))
