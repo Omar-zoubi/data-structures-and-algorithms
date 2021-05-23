@@ -31,3 +31,5 @@ second to add before targgeted value and the theird was for adding a node after 
 3. Add after:  recieve a new value and another value to add aftre it, make the next value pointer for the new value, and the prevouse value well be a refernce fot the new node.
 
 [Pull req](https://github.com/Omar-zoubi/data-structures-and-algorithms/pull/27)
+
+

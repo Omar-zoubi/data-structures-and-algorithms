@@ -81,7 +81,7 @@ def test_k_same_length():
     actual = llist.kthFromEnd(3)
     assert excpected == actual
 
-def test_k_same_length():
+def test_k_not_positive_int():
     llist=Linked_list()
     llist.insert(1)
     llist.insert(2)
@@ -91,7 +91,7 @@ def test_k_same_length():
     actual = llist.kthFromEnd(-1)
     assert excpected == actual
 
-def test_k_same_length():
+def test_one_index():
     llist=Linked_list()
     llist.insert(1)
     excpected = 1
