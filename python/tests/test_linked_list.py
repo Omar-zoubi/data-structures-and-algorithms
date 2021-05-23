@@ -59,6 +59,60 @@ def test_insert_after_mid():
     actual = llist.__str__()
     assert excpected == actual
 
+
+
+def test_k_lagerthan_length():
+    llist=Linked_list()
+    llist.insert(1)
+    llist.insert(2)
+    llist.insert(3)
+    llist.insert(4)
+    excpected = 'Invalid Index'
+    actual = llist.kthFromEnd(5)
+    assert excpected == actual
+
+def test_k_same_length():
+    llist=Linked_list()
+    llist.insert(1)
+    llist.insert(2)
+    llist.insert(3)
+    llist.insert(4)
+    excpected = 1
+    actual = llist.kthFromEnd(3)
+    assert excpected == actual
+
+def test_k_not_positive_int():
+    llist=Linked_list()
+    llist.insert(1)
+    llist.insert(2)
+    llist.insert(3)
+    llist.insert(4)
+    excpected = 'Invalid Index'
+    actual = llist.kthFromEnd(-1)
+    assert excpected == actual
+
+def test_one_index():
+    llist=Linked_list()
+    llist.insert(1)
+    excpected = 1
+    actual = llist.kthFromEnd(0)
+    assert excpected == actual
+
+
+def test_k_same_length():
+    llist=Linked_list()
+    llist.insert(1)
+    llist.insert(2)
+    llist.insert(3)
+    llist.insert(4)
+    llist.insert(5)
+    llist.insert(6)
+    excpected = 4
+    actual = llist.kthFromEnd(2)
+    assert excpected == actual
+
+
+
 @pytest.fixture
 def testing_fun():
     llist = Linked_list()
