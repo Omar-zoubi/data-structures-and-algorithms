@@ -5,7 +5,7 @@ We have to Write a method for the Linked List class which takes a number, k, as 
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![](img/Untitled(9).jpg)
+![](../../img/Untitled (10).jpg)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
