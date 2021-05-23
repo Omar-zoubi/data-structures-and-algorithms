@@ -5,7 +5,7 @@ We have to Write a method for the Linked List class which takes a number, k, as 
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![](img/Untitled (10).jpg)
+![](img/Untitled(10).jpg)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -22,3 +22,6 @@ then Looping in range (0,length-k) to reach index (length-k-1) and then return i
 2. checking if the parameter value (k) is larger than the length or less than Zero, if True  return ERORR MESSAGE
 
 3.Looping in range (0,length-k) to reach index (length-k-1) and then return its value.
+
+
+[Pull Request](https://github.com/Omar-zoubi/data-structures-and-algorithms/pull/28)
