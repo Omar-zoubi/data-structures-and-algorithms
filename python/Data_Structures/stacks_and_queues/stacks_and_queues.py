@@ -1,3 +1,8 @@
+class EmptyQueueException(Exception):
+  pass
+class Empetystackexeption(Exception):
+  pass
+
 class Node: 
   def __init__(self, value=None):
     self.value = value
@@ -16,27 +21,25 @@ class Stack:
       self.top = node
   
   def pop(self):
-    try:
-        self.top.value
-    except AttributeError:
-        return "Empty"
-    else:
-        result = self.top.value
-        temp = self.top.next
-        self.top = temp
-        return result
+    if not self.is_empty():
+        temp_node = self.top
+        self.top = self.top.next
+        temp_node.next = None
+        return temp_node.value
+    raise Empetystackexeption("Empty Stack!!")
 
   def is_empty(self):
     if self.top:
-      return False
+        return False
     return True
+
 
   def peek(self):
     if not self.is_empty():
-      return self.top.value
+        return self.top.value
+    raise Empetystackexeption("Empty Stack!!")
+
     
-    raise EmptyStackException("Cannot peek an empty stack")
-  
   def __str__(self):
     current = self.top
     items = []
@@ -46,6 +49,8 @@ class Stack:
     return "\n".join(items)
 
 class Queue:
+
+
     def __init__(self):
         self.front = None
         self.rear = None
@@ -59,6 +64,23 @@ class Queue:
         else:
             self.rear.next = node
             self.rear = self.rear.next
+    def deque(self):
+      if self.front:
+        temp = self.front 
+        self.front = self.front.next
+        return temp
+
+      raise EmptyQueueException("No queue to delete from")
+
+    def peek(self):
+      if self.front:
+        return self.front.value
+      raise EmptyQueueException("No Head")
+    
+    def is_empty(self):
+      if self.front:
+        return False
+      return True
 
     def __str__(self):
         current = self.front
