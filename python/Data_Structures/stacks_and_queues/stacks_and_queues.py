@@ -89,3 +89,61 @@ class Queue:
             items.append(str(current.value))
             current = current.next
         return "\n".join(items)
+class PseudoQueue:
+    def __init__(self):
+        self.st1 = Stack()
+        self.st2 = Stack()
+        self.c = 0
+    
+
+    def enqueue(self, *value):
+
+        self.c += 1
+        for i in value:
+            self.st1.push(i)
+
+    def dequeue(self):
+
+        if self.st2.is_empty():
+            while self.c > 0:
+                self.st2.push(self.st1.pop())
+                self.c= self.c -1
+            result = self.st2.pop()
+            while True:
+                self.st1.push(self.st2.pop())
+                self.c +=1
+                if self.st2.is_empty():
+                    return result
+        else:
+            return "stack is empty!"
+
+
+    def __str__(self):
+        result = ''
+        if self.st1.is_empty():
+            current = self.st2.top
+        else:
+            current = self.st1.top
+        while current:
+            result += f"{{{current.value}}} -> "
+            current = current.next
+        return result
+
+
+new_psQ = PseudoQueue()
+new_psQ.enqueue(3)
+new_psQ.enqueue(6)
+new_psQ.enqueue(9)
+new_psQ.enqueue(4)
+new_psQ.enqueue(7)
+new_psQ.enqueue(10)
+
+print(new_psQ.__str__())
+def test_dequeue():
+    assert new_psQ.dequeue() == 3
+    assert new_psQ.dequeue() == 6
+    assert new_psQ.dequeue() == 9
+
+if __name__ == "__main__":
+    test_dequeue()
+    print(new_psQ.__str__())
