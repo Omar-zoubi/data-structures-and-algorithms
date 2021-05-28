@@ -53,7 +53,7 @@ def zipLists(list1,list2):
     result_list=Linked_list()
     ll1=list1.head
     ll2=list2.head
-    if ll1 or ll2:
+    if ll1 and ll2:
         while ll1 or ll2:
             
             if ll1:
@@ -62,6 +62,10 @@ def zipLists(list1,list2):
             if ll2:
                 result_list.append(ll2.data)
                 ll2=ll2.next
+    elif ll1:
+        return ll1
+    elif ll2:
+        return ll2
     else:
         return 'no list to merge '
     result_list.__str__()
