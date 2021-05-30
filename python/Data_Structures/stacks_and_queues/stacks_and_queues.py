@@ -102,7 +102,7 @@ class PseudoQueue:
         for i in value:
             self.st1.push(i)
 
-    def dequeue(self):
+    def deque(self):
 
         if self.st2.is_empty():
             while self.c > 0:
@@ -130,20 +130,15 @@ class PseudoQueue:
         return result
 
 
-new_psQ = PseudoQueue()
-new_psQ.enqueue(3)
-new_psQ.enqueue(6)
-new_psQ.enqueue(9)
-new_psQ.enqueue(4)
-new_psQ.enqueue(7)
-new_psQ.enqueue(10)
+pseudoQueue = PseudoQueue()
+pseudoQueue.enqueue(1)
+pseudoQueue.enqueue(2)
+pseudoQueue.enqueue(3)
+pseudoQueue.enqueue(4)
+pseudoQueue.enqueue(5)
+pseudoQueue.enqueue(6)
 
-print(new_psQ.__str__())
-def test_dequeue():
-    assert new_psQ.dequeue() == 3
-    assert new_psQ.dequeue() == 6
-    assert new_psQ.dequeue() == 9
+
 
 if __name__ == "__main__":
-    test_dequeue()
-    print(new_psQ.__str__())
+  print(pseudoQueue.__str__())
