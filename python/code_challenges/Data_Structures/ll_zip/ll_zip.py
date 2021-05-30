@@ -68,17 +68,17 @@ def zipLists(list1,list2):
         return ll2
     else:
         return 'no list to merge '
-    result_list.__str__()
+    return result_list
 
 
-# if __name__ == "__main__":
-#     li=Linked_list()
-#     li2=Linked_list()
-#     li.insert('o')
-#     li.insert('a')
-#     li.insert('z')
-#     li2.insert('m')
-#     li2.insert('r')
-#     li2.insert('b')
-#     zipLists(li,li2)
-#     print(zipLists(li,li2))
+if __name__ == "__main__":
+    li=Linked_list()
+    li2=Linked_list()
+    li.insert('o')
+    li.insert('a')
+    li.insert('z')
+    li2.insert('m')
+    li2.insert('r')
+    li2.insert('b')
+    zipLists(li,li2)
+    print(zipLists(li,li2))

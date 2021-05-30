@@ -1,5 +1,5 @@
 import pytest
-from Data_Structures.linked_list.linked_list import *
+from code_challenges.Data_Structures.linked_list.linked_list import *
 
 def test_insert(testing_fun):
     excpected = "{Al-zoubi} -> {Mohammad} -> {Omar} ->  NULL"
