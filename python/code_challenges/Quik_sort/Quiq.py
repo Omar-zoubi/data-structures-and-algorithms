@@ -21,4 +21,4 @@ def Swap(arr, i, low):
 
 
 if __name__ == "__main__":   
-    print(quick_sort([5,3,9,20,4],0,4))
+    print(quick_sort([7,4,10,16,6],0,4))
