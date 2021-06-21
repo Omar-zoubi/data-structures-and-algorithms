@@ -10,9 +10,6 @@ Time: O(1)
 Space: O(N)
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
-
-
 1.Define a function that receive a string.
-2.Split the sentence to words by looping throw and extracting a word that before and after a space.
-3.Create a new array to save the values on it then check if the new value exist in or not .
-4.Return the value if it in the new array or return "no repeat" if there is no repeat.
+2.Define a copy from hash_table.to save the values on it then check if the new value exist in or not .
+3.Return the value if it in the hash_table or return "no repeat" if there is no repeat.
