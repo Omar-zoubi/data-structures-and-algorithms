@@ -1,0 +1,41 @@
+from Data_Structures.tree_intersection.tree_intersection import * 
+def test_tree_intersection():
+    first_tree = BinaryTree()
+    first_tree.root = Node(7)
+    first_tree.root.right = Node(23)
+    first_tree.root.left = Node(19)
+    first_tree.root.right.right = Node(11)
+    first_tree.root.right.left = Node(32)
+    first_tree.root.left.left = Node(45)
+    first_tree.root.left.right = Node(-2)
+    second_tree = BinaryTree()
+    second_tree.root = Node(19)
+    second_tree.root.right = Node(25)
+    second_tree.root.left = Node(150)
+    second_tree.root.right.left = Node(66)
+    second_tree.root.right.right = Node(30)
+    second_tree.root.left.right = Node(45)
+    second_tree.root.left.left = Node(11)
+    actual = tree_intersection(first_tree,second_tree)
+    expected = [19, 45, 11]
+    assert actual==expected
+def test_no_mach():
+    first_tree = BinaryTree()
+    first_tree.root = Node(7)
+    first_tree.root.right = Node(23)
+    first_tree.root.left = Node(19)
+    first_tree.root.right.right = Node(11)
+    first_tree.root.right.left = Node(32)
+    first_tree.root.left.left = Node(45)
+    first_tree.root.left.right = Node(-2)
+    second_tree = BinaryTree()
+    second_tree.root = Node(18)
+    second_tree.root.right = Node(25)
+    second_tree.root.left = Node(150)
+    second_tree.root.right.left = Node(66)
+    second_tree.root.right.right = Node(30)
+    second_tree.root.left.right = Node(46)
+    second_tree.root.left.left = Node(12)
+    actual = tree_intersection(first_tree,second_tree)
+    expected = "No Mach Found"
+    assert actual == expected
